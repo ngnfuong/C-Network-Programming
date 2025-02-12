@@ -5,7 +5,7 @@ services:
     build: .
     image: gcc-core
     volumes:
-      - ./tcp_server:/app
+      - ./Chap02/tcp_server:/app
     tty: true
     networks:
       net-172.20.0.0:
@@ -15,7 +15,7 @@ services:
     build: .
     image: gcc-core
     volumes:
-      - ./tcp_client:/app
+      - ./Chap02/tcp_client:/app
     tty: true
     networks:
       net-172.20.0.0:
