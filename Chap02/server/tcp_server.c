@@ -34,7 +34,7 @@ int main() {
     if (bind(sockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) 
         error("ERROR on binding");
 
-    // Listen for connections
+    // Listen for conn ections
     listen(sockfd, 5);
     clilen = sizeof(cli_addr);
 
