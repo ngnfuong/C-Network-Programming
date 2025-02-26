@@ -31,6 +31,15 @@ services:
     networks:
       net-172.20.0.0:
         ipv4_address: 172.20.0.102
+  dns_spoofer:
+    build: .
+    container_name: dns_spoofer
+    networks:
+      - spoof_network
+    cap_add:
+      - NET_ADMIN  # Cần quyền NET_ADMIN để gửi gói tin raw
+    ports:
+      - "53:53/udp"  # Mở cổng 53 (UDP) để lắng nghe truy vấn DNS
 networks:
       net-172.20.0.0:
         name: net-172.20.0.0
