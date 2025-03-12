@@ -6,6 +6,8 @@
 #include <pthread.h>
 #include <sys/stat.h>
 #include <fcntl.h> // For file operations
+#include <openssl/ssl.h>
+#include <openssl/err.h> 
 
 #define PORT 8080
 #define BUFFER_SIZE 4096
