@@ -5,11 +5,12 @@ from rich import print
 
 load_dotenv()
 
-api_key = os.environ["GROQ_API_KEY"]
+api_key = os.environ["DEEP_API_KEY"]
 
 def get_llm_response(message):
     response = completion(
-        model="groq/llama3-8b-8192",
+        model="deepseek/deepseek-chat",
+        temperature = 0.7,
         api_key = api_key,
         messages=message,
         stream=False
@@ -23,7 +24,7 @@ messages = [
     },
     {
         "role":"user",
-        "content":"When is my next meeting?"
+        "content":"Are u OK bae?"
     }
 ]
 
